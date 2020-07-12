@@ -1,4 +1,4 @@
-class Popup {
+export class Popup {
   constructor(title, content, additionalClasses) {
     this._domElement = null;
     this._closeButton = null;

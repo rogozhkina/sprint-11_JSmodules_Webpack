@@ -1,4 +1,4 @@
-class LargeImage {
+export class LargeImage {
   constructor() {
     this._domElement = null;
   }

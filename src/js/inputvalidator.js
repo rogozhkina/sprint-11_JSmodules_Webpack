@@ -1,4 +1,4 @@
-class InputValidator {
+export class InputValidator {
   constructor(min, max, errorMessageEmpty, errorMessageWrongLength) {
     this._min = min;
     this._max = max;
