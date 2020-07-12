@@ -1,6 +1,6 @@
 "use strict";
 
-class Card {
+export class Card {
   constructor(cardData) {
     this._domElement = null;
     this._cardData = cardData;
