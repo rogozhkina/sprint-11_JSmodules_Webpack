@@ -1,4 +1,6 @@
-class FormCard extends Form {
+import { Form } from "./form.js";
+
+export class FormCard extends Form {
   constructor(
     cardList,
     inputs,
