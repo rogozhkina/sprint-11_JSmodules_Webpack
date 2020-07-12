@@ -1,3 +1,22 @@
+import "../pages/index.css";
+// import "../style.css";
+
+import { Api } from "./api.js";
+import { Button } from "./button.js";
+import { Card } from "./card.js";
+import { CardList } from "./cardlist.js";
+// import { Form } from "./form.js";
+import { FormCard } from "./formcard.js";
+import { FormUser } from "./formuser.js";
+import { FormValidator } from "./formvalidator.js";
+import { InputValidator } from "./inputvalidator.js";
+import { LargeImage } from "./largeimage.js";
+import { PlacesPage } from "./placespage.js";
+import { Popup } from "./popup.js";
+import { TextInput } from "./textinput.js";
+import { URLValidator } from "./urlvalidator.js";
+import { UserInfo } from "./userinfo.js";
+
 (function () {
   const domRootNode = document.querySelector(".root");
   const domEditButton = document.querySelector(".user-info__button_edit");
