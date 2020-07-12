@@ -1,4 +1,4 @@
-class Button {
+export class Button {
   constructor(title, additionalClasses, classDisabled) {
     this._title = title;
     this._classDisabled = classDisabled;
