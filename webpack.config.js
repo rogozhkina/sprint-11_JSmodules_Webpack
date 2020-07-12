@@ -1,11 +1,10 @@
-// webpack.config.js
-
-// подключаем path к конфигу вебпак
 const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-// переписали точку выхода, используя утилиту path
 module.exports = {
-  entry: { main: "./src/index.js" },
+  entry: {
+    main: "./src/index.js",
+  },
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "main.js",
@@ -13,11 +12,21 @@ module.exports = {
   module: {
     rules: [
       {
-        // тут описываются правила
-        test: /\.js$/, // регулярное выражение, которое ищет все js файлы
-        use: { loader: "babel-loader" }, // весь JS обрабатывается пакетом babel-loader
-        exclude: /node_modules/, // исключает папку node_modules
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+        },
+      },
+      {
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
     ],
   },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: "style.css",
+    }),
+  ],
 };
