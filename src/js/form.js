@@ -1,4 +1,4 @@
-class Form {
+export class Form {
   constructor(inputs, submitButton, formValidatorCreator, additionalClasses) {
     this._domElement = null;
     this._inputs = inputs;
