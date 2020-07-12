@@ -1,4 +1,4 @@
-class UserInfo {
+export class UserInfo {
   constructor(selectorName, selectorJob, selectorAvatar) {
     this._domName = document.querySelector(selectorName);
     this._domJob = document.querySelector(selectorJob);
