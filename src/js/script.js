@@ -13,6 +13,7 @@ import { InputValidator } from "./inputvalidator.js";
 import { LargeImage } from "./largeimage.js";
 import { PlacesPage } from "./placespage.js";
 import { Popup } from "./popup.js";
+import { PopupImage } from "./popupimage.js";
 import { TextInput } from "./textinput.js";
 import { URLValidator } from "./urlvalidator.js";
 import { UserInfo } from "./userinfo.js";
