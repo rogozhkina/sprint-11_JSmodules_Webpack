@@ -1,4 +1,6 @@
-class FormUser extends Form {
+import { Form } from "./form.js";
+
+export class FormUser extends Form {
   constructor(
     userInfo,
     inputs,
