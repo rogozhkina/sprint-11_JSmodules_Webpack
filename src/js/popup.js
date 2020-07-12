@@ -1,3 +1,5 @@
+import "../images/close.svg";
+
 export class Popup {
   constructor(title, content, additionalClasses) {
     this._domElement = null;
@@ -18,7 +20,7 @@ export class Popup {
     return `
     <div class="popup">
         <div class="popup__content">
-        <img src="./images/close.svg" alt="" class="popup__close" />
+        <img  src="../images/close.svg" alt="" class="popup__close" />
         </div>
     </div>
   `;

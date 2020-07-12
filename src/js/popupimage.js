@@ -1,4 +1,5 @@
 import { Popup } from "./popup.js";
+import "../images/close.svg";
 
 export class PopupImage extends Popup {
   constructor(content, additionalClasses) {
@@ -9,7 +10,7 @@ export class PopupImage extends Popup {
     return `
     <div class="zoomer">
         <div class="zoomer__content">
-        <img src="./images/close.svg" alt="" class="zoomer__close" />
+        <img  src="../images/close.svg" alt="" class="zoomer__close" />
         </div>
     </div>
   `;
