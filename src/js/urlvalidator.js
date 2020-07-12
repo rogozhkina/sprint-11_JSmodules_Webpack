@@ -1,4 +1,6 @@
-class URLValidator extends InputValidator {
+import { InputValidator } from "./inputvalidator.js";
+
+export class URLValidator extends InputValidator {
   constructor(errorMessageEmpty, errMessageWrongLink) {
     super(0, 0, errorMessageEmpty, "");
     this._errMessageWrongLink = errMessageWrongLink;
