@@ -1,5 +1,3 @@
-import "../images/close.svg";
-
 export class Popup {
   constructor(title, content, additionalClasses) {
     this._domElement = null;
@@ -7,6 +5,7 @@ export class Popup {
 
     this._content = content;
     this._title = title;
+
     this._additionalClasses = additionalClasses;
     if (typeof this._additionalClasses !== "object") {
       this._additionalClasses = [];
@@ -17,10 +16,11 @@ export class Popup {
   }
 
   _template() {
+    const icon = require("../images/close.svg");
     return `
     <div class="popup">
         <div class="popup__content">
-        <img  src="../images/close.svg" alt="" class="popup__close" />
+        <img  src="${icon}" alt="" class="popup__close" />
         </div>
     </div>
   `;
