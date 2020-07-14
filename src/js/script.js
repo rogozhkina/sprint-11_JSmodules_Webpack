@@ -43,7 +43,8 @@ import { UserInfo } from "./userinfo.js";
   );
 
   const cardList = new CardList(domCardListContainer, (cardData) => {
-    return (newCard = new Card(cardData));
+    const newCard = new Card(cardData);
+    return newCard;
   });
 
   const formAdd = new FormCard(
