@@ -112,6 +112,7 @@ import { UserInfo } from "./userinfo.js";
     popupAdd,
     popupUser,
     formEdit,
+    formAdd,
     popupImage,
     largeImage
   );

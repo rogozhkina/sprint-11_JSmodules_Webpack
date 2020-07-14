@@ -9,6 +9,7 @@ export class PlacesPage {
     popupAdd,
     popupUser,
     userForm,
+    formAdd,
     popupImage,
     largeImage
   ) {
@@ -21,12 +22,14 @@ export class PlacesPage {
     this._popupAdd = popupAdd;
     this._popupUser = popupUser;
     this._userForm = userForm;
+    this._formAdd = formAdd;
     this._popupImage = popupImage;
     this._largeImage = largeImage;
     this._onClickEditUser = this._onClickEditUser.bind(this);
     this._onClickAddCard = this._onClickAddCard.bind(this);
     this._onClickLargeImage = this._onClickLargeImage.bind(this);
     this._onFormSubmitClicked = this._onFormSubmitClicked.bind(this);
+    this._onAddSubmitClicked = this._onAddSubmitClicked.bind(this);
     this._domRootNode.appendChild(this._popupUser.domElement());
     this._domRootNode.appendChild(this._popupAdd.domElement());
     this._domRootNode.appendChild(this._popupImage.domElement());
@@ -38,6 +41,7 @@ export class PlacesPage {
     this._domAddButton.addEventListener("click", this._onClickAddCard);
     this._cardList.subscribeLargeImageClick(this._onClickLargeImage);
     this._userForm.subscribeSubmit(this._onFormSubmitClicked);
+    this._formAdd.subscribeSubmit(this._onAddSubmitClicked);
   }
 
   _onClickLargeImage(cardData) {
@@ -74,6 +78,10 @@ export class PlacesPage {
         this._popupUser.reset();
       }
     );
+  }
+
+  _onAddSubmitClicked() {
+    this._popupAdd.close();
   }
 
   render() {
