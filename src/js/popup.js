@@ -68,10 +68,6 @@ export class Popup {
       popupContent.appendChild(domContent);
     }
 
-    //    if (typeof this._content.subscribeSubmit === "function") {
-    //      this._content.subscribeSubmit(this.close);
-    //    }
-
     return element;
   }
 

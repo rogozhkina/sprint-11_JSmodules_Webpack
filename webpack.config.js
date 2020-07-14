@@ -8,14 +8,10 @@ const isDev = process.env.NODE_ENV === "development";
 
 module.exports = {
   entry: "./src/js/script.js",
-  // entry: {
-  //   // main: "./src/index.js",
-  //   main: "./src/js/script.js",
-  // },
+
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].[chunkhash].js",
-    // filename: "main.js",
   },
   module: {
     rules: [
@@ -24,9 +20,6 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
-          // options: {
-          //   plugins: ["transform-class-properties"],
-          // },
         },
       },
       {
@@ -39,20 +32,13 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|jpeg|gif|ico|svg)$/i,
-        // use: [
-        //   "file-loader?name=./images/[name].[ext]&esModule=false",
-        //   {
-        //     loader: "image-webpack-loader",
-        //     options: {},
-        //   },
-        // ],
+
         use: [
           {
             loader: "file-loader",
             options: {
               name: "./images/[name].[ext]",
-              // name: ".[patch][name].[ext]",
-              // name: ".[name].[ext]",
+
               esModule: false,
             },
           },
@@ -60,14 +46,13 @@ module.exports = {
       },
       {
         test: /\.(eot|ttf|woff|woff2)$/,
-        // loader: "file-loader?name=./vendor/[name].[ext]",
+
         loader: "file-loader?name=./vendor/fonts/[name].[ext]",
       },
     ],
   },
   plugins: [
     new MiniCssExtractPlugin({
-      // filename: "style.[contenthash].css",
       filename: "[name].[contenthash].css",
     }),
     new OptimizeCssAssetsPlugin({

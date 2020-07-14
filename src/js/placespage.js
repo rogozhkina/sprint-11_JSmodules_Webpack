@@ -62,16 +62,16 @@ export class PlacesPage {
       this._userInfo.name(),
       this._userInfo.job(),
       (data) => {
-        // в случае success
+        // В случае success
         // сохраняем и отображаем по второму кругу с использованием информации
         // от сервера, хотя данные должны совпасть
         this._userInfo.setUserInfo(data.name, data.about);
         this._userInfo.updateUserInfo(); // отрисовка
-        // закрытие больше не происходит по подписке popup
+        // Закрытие больше не происходит по подписке popup
         this._popupUser.close();
       },
       () => {
-        // в случае failed
+        // В случае failed
         this._userInfo.undoUserInfo(); // возврат старых значений
         this._userInfo.updateUserInfo(); // отрисовка
         alert("Не удалось сохранить!");

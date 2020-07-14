@@ -10,7 +10,7 @@ export class UserInfo {
     this._job = "";
     this._avatar = "";
 
-    // для возврата по undo
+    // Для возврата по undo
     this._prevName = "";
     this._prevJob = "";
     this._prevAvatar = "";
@@ -57,7 +57,7 @@ export class UserInfo {
   }
 
   // Возвращает предыдущие значения
-  // на случай, если что-то пошло не так.
+  // на случай, если что-то пошло не так
   undoUserInfo() {
     this._avatar = this._prevAvatar;
     this._name = this._prevName;

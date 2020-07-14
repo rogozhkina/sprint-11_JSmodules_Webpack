@@ -1,11 +1,9 @@
 import "../pages/index.css";
-// import "../style.css";
 
 import { Api } from "./api.js";
 import { Button } from "./button.js";
 import { Card } from "./card.js";
 import { CardList } from "./cardlist.js";
-// import { Form } from "./form.js";
 import { FormCard } from "./formcard.js";
 import { FormUser } from "./formuser.js";
 import { FormValidator } from "./formvalidator.js";
@@ -29,7 +27,10 @@ import { UserInfo } from "./userinfo.js";
   const errorWrongLink = "Это не ссылка";
 
   const api = new Api({
-    baseUrl: "https://praktikum.tk/cohort11",
+    baseUrl:
+      process.env.NODE_ENV === "production"
+        ? "https://praktikum.tk/cohort11"
+        : "http://praktikum.tk/cohort11",
     headers: {
       authorization: "098deaea-e99e-492d-906f-622aa2508f6d",
       "Content-Type": "application/json",

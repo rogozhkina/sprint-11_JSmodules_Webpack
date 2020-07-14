@@ -38,8 +38,8 @@
 1. Скачать или склонировать репозитория
 2. Установить зависимости при помощи npm - npm i
 3. Запустить в development режиме - npm run dev
-4. Запустить сборку production-build - npm run build
-5. Разместить production-build на github pages - npm run deploy
+4. Запустить сборку production-bundle - npm run build
+5. Разместить production-bundle на github pages - npm run deploy
 
 #### Ссылка на github-pages:
 
