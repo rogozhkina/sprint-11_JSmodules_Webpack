@@ -1,7 +1,7 @@
 {
   "name": "sprint-11_jsmodules_webpack",
   "version": "0.0.1",
-  "description": "",
+  "description": "JS modules, Webpack",
   "main": "index.js",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
