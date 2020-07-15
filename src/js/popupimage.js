@@ -10,7 +10,7 @@ export class PopupImage extends Popup {
     return `
     <div class="zoomer">
         <div class="zoomer__content">
-        <img  src='${icon}' alt="" class="zoomer__close" />
+        <img  src="${icon}" alt="" class="zoomer__close" />
         </div>
     </div>
   `;
