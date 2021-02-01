@@ -1,0 +1,7 @@
+.zoomer__close {
+  width: 26px;
+  position: absolute;
+  top: -32px;
+  right: -33px;
+  cursor: pointer;
+}

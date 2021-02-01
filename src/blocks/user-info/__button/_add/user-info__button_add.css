@@ -1,0 +1,15 @@
+.user-info__button_add {
+  position: absolute;
+  font-size: 40px;
+  margin: 20px 0;
+  top: 16px;
+  right: 0;
+}
+
+@media screen and (max-width: 980px) {
+  .user-info__button_add {
+    margin: 20px auto;
+    position: static;
+    margin-bottom: 40px;
+  }
+}
